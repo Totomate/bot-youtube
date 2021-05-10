@@ -4,8 +4,8 @@ const client = new Discord.Client();
 const fetch = require("node-fetch");
 
 const config = {
-    token: "secrets.TOKEN",
-    prefix: "-"
+    token: "YOUR_TOKEN",
+    prefix: "YOUR_PREFIX"
 }
 
 client.on('ready', () => {
@@ -53,6 +53,7 @@ client.on('message', message => {
                 })
                 .catch(e => {
                     message.channel.send(`❌ | Erreur, je ne peux pas commencer l'activité **YouTube**!`);
+                    console.log(e)
                 })
 	} else if(command === 'dev' || command === 'developper') {
 		return message.channel.send("From totomate")
