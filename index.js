@@ -4,8 +4,8 @@ const client = new Discord.Client();
 const fetch = require("node-fetch");
 
 const config = {
-    token: "YOUR_TOKEN",
-    prefix: "YOUR_PREFIX"
+    token: "secrets.token",
+    prefix: "-"
 }
 
 client.on('ready', () => {
