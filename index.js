@@ -12,7 +12,7 @@ client.on('ready', () => {
 
  
     client.user.setActivity(`${config.prefix}youtube`);
-    console.log(`${client.user.username} : ${prefix} ✅`)
+    console.log(`${client.user.username} : ${config.prefix} ✅`)
 });
 
 client.on('message', message => {
@@ -49,7 +49,7 @@ client.on('message', message => {
                 .then(res => res.json())
                 .then(invite => {
                     if (invite.error || !invite.code) return message.channel.send(`❌ | Erreur, je ne peux pas commencer l'activité **YouTube**!`);
-                    message.channel.send(`✅ | Clique ici pour commencer **YouTube** ${language(guild, 'in')} ${channel.name}: <https://discord.gg/${invite.code}>`);
+                    message.channel.send(`✅ | Clique ici pour commencer **YouTube** dans ${channel.name}: <https://discord.gg/${invite.code}>`);
                 })
                 .catch(e => {
                     message.channel.send(`❌ | Erreur, je ne peux pas commencer l'activité **YouTube**!`);
